@@ -1,0 +1,113 @@
+@use "sass:color";
+
+.button {
+    display: inline-flex;
+    font-family: sans-serif;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    &--primary {
+        color: #fff;
+        background-color: #3b82f6;
+
+        &:hover {
+            background-color: color.adjust(#3b82f6, $lightness: -10%);
+        }
+
+        &:active {
+            background-color: color.adjust(#3b82f6, $lightness: -20%);
+        }
+    }
+
+    &--secondary {
+        color: #fff;
+        background-color: #64748b;
+
+        &:hover {
+            background-color: color.adjust(#64748b, $lightness: -10%);
+        }
+
+        &:active {
+            background-color: color.adjust(#64748b, $lightness: -20%);
+        }
+    }
+
+    &--tertiary {
+        color: #3b82f6;
+        background-color: #dbeafe;
+
+        &:hover {
+            background-color: color.adjust(#dbeafe, $lightness: -2%);
+        }
+
+        &:active {
+            background-color: color.adjust(#dbeafe, $lightness: -8%);
+        }
+    }
+
+    &--link {
+        color: #3b82f6;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--default {
+        border-color: #d1d5db;
+        background-color: #fff;
+
+        &:hover {
+            background-color: #f9fafb;
+        }
+
+        &:active {
+            background-color: #f3f4f6;
+        }
+    }
+
+    &--xsmall {
+        font-size: 12px;
+        height: 32px;
+        padding: 0 8px;
+    }
+
+    &--small {
+        font-size: 13px;
+        height: 36px;
+        padding: 0 12px;
+    }
+
+    &--large {
+        font-size: 15px;
+        height: 48px;
+        padding: 0 20px;
+    }
+
+    &--xlarge {
+        font-size: 16px;
+        height: 54px;
+        padding: 0 24px;
+    }
+
+    &.rounded--small {
+        border-radius: 4px;
+    }
+
+    &.rounded--large {
+        border-radius: 12px;
+    }
+
+    &.rounded--full {
+        border-radius: 100px;
+    }
+}
